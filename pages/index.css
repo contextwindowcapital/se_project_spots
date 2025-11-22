@@ -1,3 +1,129 @@
 @import url(../vendor/normalize.css);
-@import url(../vendor/fonts/Poppins);
+@import url(../vendor/fonts.css);
 @import url(../blocks/page.css);
+@import url(../blocks/header.css);
+@import url(../blocks/profile.css);
+@import url(../blocks/cards.css);
+@import url(../blocks/footer.css);
+
+/* Desktop View (1320px and greater):
+The page should match the 1440px Figma layout. The only difference will be the amount of space on the sides.
+The page content should have a maximum width of 320px(typo check 1320?) and be centered.
+There should be 3 cards per row.
+*/
+@media screen and (min-width: 1320px) {
+  .content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .profile__image {
+    height: 190px;
+    width: 190px;
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .profile__button_new-post {
+    max-width: 149px;
+    height: 52px;
+    width: 100%;
+  }
+}
+
+/*Tablet View (630px – 1320px):
+The layout should adjust to 2 cards per row.
+The card sizes should remain the same as in the desktop view.*/
+
+@media screen and (min-width: 630px) and (max-width: 1319px) {
+  .content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .profile__image {
+    height: 190px;
+    width: 190px;
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .profile__button_new-post {
+    max-width: 149px;
+    height: 52px;
+    width: 100%;
+  }
+}
+
+/*Mobile View (320px – 630px):
+The media query should not be set at 320px. The frames provided in Figma don’t determine the sizes of the media queries.
+The page should match the 320px Figma layout. The only difference will be the amount of space on the sides.
+The minimum supported screen width is 320px.*/
+
+@media screen and (min-width: 320px) and (max-width: 629px) {
+  .content {
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 288px;
+  }
+
+  .card__image {
+    max-height: 288px;
+    max-width: 288px;
+    width: 100%;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile__details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile__edit {
+    justify-content: center;
+  }
+
+  .profile__image {
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+    margin: 0;
+  }
+
+  .profile__button_new-post {
+    max-width: 288px;
+    height: 52px;
+    width: 100%;
+  }
+}

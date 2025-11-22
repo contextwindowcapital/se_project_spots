@@ -1,21 +1,25 @@
 # Project 3: Spots
 
-### Overview  
+### Spots Overview
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+A responsive web project showcasing adaptive design principles across multiple screen sizes.
+
+**About**
+
+Spots is a practice project focused on building a fully responsive layout that displays correctly on all popular screen sizes.
+
+The brief is a test of taking a figma design and using all the HTML and CSS knowledge we've learned so far and convert the design into working code.
+
+The goal is to display all the elements are correctly on various popular screen sizes.
+
+**Figma Design**
+
+The design specs are available on Figma:
+
+- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+
+**Technologies Used**
+
+- HTML5
+- CSS3
+- Responsive Design

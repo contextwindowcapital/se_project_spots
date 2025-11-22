@@ -1,0 +1,54 @@
+.cards {
+  border-bottom: 1px solid #000;
+  padding: 20px 0 20px 0;
+}
+
+.card {
+  max-width: 413px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 40px 0;
+  margin: 0;
+}
+
+.card__image {
+  max-height: 413px;
+  max-width: 413px;
+  border-radius: 8px;
+}
+
+.card__title {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 240px;
+}
+
+.card__description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  padding: 12px 0 0 0;
+}
+
+.card__like-icon {
+  cursor: pointer;
+}
+
+.card__like-icon:hover {
+  opacity: 40%;
+}
