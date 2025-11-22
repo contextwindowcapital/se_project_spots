@@ -29,8 +29,11 @@
   flex-wrap: wrap;
 }
 
-.profile__details_user-info {
+.profile__user-info {
   padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile__name {
@@ -40,6 +43,7 @@
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
+  margin: 0;
 }
 
 .profile__description {
@@ -50,12 +54,15 @@
   line-height: 100%;
   letter-spacing: 0%;
   padding: 0px 0px 20px;
+  margin: 0;
 }
 
 .profile__edit {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  display: flex;
+  margin-top: auto;
 }
 
 .profile__edit:hover {
@@ -78,7 +85,7 @@
   margin: 0;
 }
 
-.profile__button_new-post {
+.profile__new-post {
   background-color: #212121;
   margin-top: auto;
   color: #fff;
@@ -89,17 +96,17 @@
   border-radius: 8px;
 }
 
-.profile__button_new-post:hover {
+.profile__new-post:hover {
   opacity: 40%;
 }
 
-.profile__button_new-post-icon {
+.profile__new-post-icon {
   height: 12px;
   width: 12px;
   padding: 0 8px 0 0;
 }
 
-.profile__button_text {
+.profile__text {
   font-family: Poppins;
   font-weight: 500;
   font-style: Medium;

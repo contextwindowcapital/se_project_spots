@@ -31,7 +31,7 @@ There should be 3 cards per row.
     margin: 0;
   }
 
-  .profile__button_new-post {
+  .profile__new-post {
     max-width: 149px;
     height: 52px;
     width: 100%;
@@ -62,7 +62,7 @@ The card sizes should remain the same as in the desktop view.*/
     margin: 0;
   }
 
-  .profile__button_new-post {
+  .profile__new-post {
     max-width: 149px;
     height: 52px;
     width: 100%;
@@ -108,10 +108,19 @@ The minimum supported screen width is 320px.*/
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 0 20px 0;
+  }
+
+  .profile__user-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0;
   }
 
   .profile__edit {
     justify-content: center;
+    padding: 32px 0 0 0;
   }
 
   .profile__image {
@@ -121,7 +130,7 @@ The minimum supported screen width is 320px.*/
     margin: 0;
   }
 
-  .profile__button_new-post {
+  .profile__new-post {
     max-width: 288px;
     height: 52px;
     width: 100%;
