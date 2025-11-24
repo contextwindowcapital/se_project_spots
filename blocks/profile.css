@@ -4,24 +4,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #21212166;
   padding: 34px 0 20px 0;
-}
-
-.profile h1 {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
-.profile p {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .profile__details {
@@ -36,33 +20,59 @@
   align-items: flex-start;
 }
 
+.profile__image {
+  height: 190px;
+  width: 190px;
+  border-radius: 8px;
+  margin: 0;
+}
+
 .profile__name {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   font-family: "Poppins";
   font-weight: 500;
-  font-style: Medium;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
   margin: 0;
+  max-width: 420px;
+  color: #212121;
 }
 
 .profile__description {
   font-family: "Poppins";
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  padding: 0px 0px 20px;
+  color: #212121;
+  padding: 12px 0px 20px;
   margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+  opacity: 70%;
 }
 
 .profile__edit {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  display: flex;
   margin-top: auto;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 70%;
+  color: #212121;
 }
 
 .profile__edit:hover {
@@ -78,7 +88,6 @@
 .profile__edit-link {
   font-family: Poppins;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -94,10 +103,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  cursor: pointer;
+  max-width: 149px;
+  height: 52px;
+  width: 100%;
 }
 
 .profile__new-post:hover {
-  opacity: 40%;
+  opacity: 80%;
 }
 
 .profile__new-post-icon {
@@ -109,7 +122,6 @@
 .profile__text {
   font-family: Poppins;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;

@@ -23,3 +23,9 @@ The design specs are available on Figma:
 - HTML5
 - CSS3
 - Responsive Design
+
+**Github Pages Link**
+
+- [Link to the project on Github] (https://contextwindowcapital.github.io/se_project_spots/)
+
+**Loom Project Description**

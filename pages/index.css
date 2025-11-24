@@ -12,29 +12,13 @@ The page content should have a maximum width of 320px(typo check 1320?) and be c
 There should be 3 cards per row.
 */
 @media screen and (min-width: 1320px) {
-  .content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .cards {
+  .cards__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .profile__image {
-    height: 190px;
-    width: 190px;
-    border-radius: 8px;
+    grid-template-columns: repeat(auto-fit, 413px);
+    gap: 40px 20px;
+    justify-content: center;
+    padding: 0;
     margin: 0;
-  }
-
-  .profile__new-post {
-    max-width: 149px;
-    height: 52px;
-    width: 100%;
   }
 }
 
@@ -43,29 +27,13 @@ The layout should adjust to 2 cards per row.
 The card sizes should remain the same as in the desktop view.*/
 
 @media screen and (min-width: 630px) and (max-width: 1319px) {
-  .content {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .cards {
+  .cards__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .profile__image {
-    height: 190px;
-    width: 190px;
-    border-radius: 8px;
+    grid-template-columns: repeat(2, 413px);
+    gap: 40px 20px;
+    justify-content: center;
+    padding: 0;
     margin: 0;
-  }
-
-  .profile__new-post {
-    max-width: 149px;
-    height: 52px;
-    width: 100%;
   }
 }
 
@@ -76,15 +44,18 @@ The minimum supported screen width is 320px.*/
 
 @media screen and (min-width: 320px) and (max-width: 629px) {
   .content {
-    padding: 20px;
+    padding: 0 16px;
     margin: 0 auto;
   }
 
-  .cards {
+  .cards__list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     gap: 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
   }
 
   .card {
@@ -92,7 +63,8 @@ The minimum supported screen width is 320px.*/
   }
 
   .card__image {
-    max-height: 288px;
+    height: 288px;
+    object-fit: cover;
     max-width: 288px;
     width: 100%;
   }
