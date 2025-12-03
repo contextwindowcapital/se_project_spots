@@ -53,3 +53,62 @@
 .card__like-icon:hover {
   opacity: 1;
 }
+
+/* Desktop View (1320px and greater):
+The page should match the 1440px Figma layout. The only difference will be the amount of space on the sides.
+The page content should have a maximum width of 320px(typo check 1320?) and be centered.
+There should be 3 cards per row.
+*/
+@media screen and (min-width: 1320px) {
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 413px);
+    gap: 40px 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*Tablet View (630px – 1320px):
+The layout should adjust to 2 cards per row.
+The card sizes should remain the same as in the desktop view.*/
+
+@media screen and (min-width: 630px) and (max-width: 1319px) {
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(2, 413px);
+    gap: 40px 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*Mobile View (320px – 630px):
+The media query should not be set at 320px. The frames provided in Figma don’t determine the sizes of the media queries.
+The page should match the 320px Figma layout. The only difference will be the amount of space on the sides.
+The minimum supported screen width is 320px.*/
+
+@media screen and (min-width: 320px) and (max-width: 629px) {
+  .cards__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card {
+    max-width: 288px;
+  }
+
+  .card__image {
+    height: 288px;
+    object-fit: cover;
+    max-width: 288px;
+    width: 100%;
+  }
+}

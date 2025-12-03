@@ -6,5 +6,16 @@
 .content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
+}
+
+/*Mobile View (320px – 630px):
+The media query should not be set at 320px. The frames provided in Figma don’t determine the sizes of the media queries.
+The page should match the 320px Figma layout. The only difference will be the amount of space on the sides.
+The minimum supported screen width is 320px.*/
+
+@media screen and (min-width: 320px) and (max-width: 629px) {
+  .content {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
 }

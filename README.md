@@ -29,3 +29,5 @@ The design specs are available on Figma:
 - [Link to the project on Github] (https://contextwindowcapital.github.io/se_project_spots/)
 
 **Loom Project Description**
+
+- [Link to the project on Github] (https://www.loom.com/share/17d547c8439843a3bf0f6b106a350f1a)
