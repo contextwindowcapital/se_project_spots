@@ -27,8 +27,12 @@
               class="profile__image"
             />
             <div class="profile__user-info">
-              <h1 class="profile__name">Bessie Coleman</h1>
-              <p class="profile__description">Civil Aviator</p>
+              <h1 id="profile-name-textarea" class="profile__name">
+                Bessie Coleman
+              </h1>
+              <p id="profile-description-textarea" class="profile__description">
+                Civil Aviator
+              </p>
               <button class="profile__edit-btn">
                 <img
                   src="./images/edit-icon.svg"
@@ -160,6 +164,7 @@
               name="name"
               placeholder="Type your name"
               class="modal__form-field"
+              id="name-input-field"
             />
             <label for="description" class="modal__form-label"
               >Description</label
@@ -169,6 +174,7 @@
               name="description"
               placeholder="Describe yourself"
               class="modal__form-field"
+              id="description-input-field"
             />
             <button class="modal__save-btn" type="submit">Save</button>
           </form>
@@ -191,6 +197,7 @@
               name="image-link"
               placeholder="Paste a link to the picture"
               class="modal__form-field"
+              id="image-link"
             />
             <label for="description" class="modal__form-label">Caption</label>
             <input
@@ -198,6 +205,7 @@
               name="caption"
               placeholder="Type your caption"
               class="modal__form-field"
+              id="caption"
             />
             <button class="modal__save-btn" type="submit">Save</button>
           </form>
