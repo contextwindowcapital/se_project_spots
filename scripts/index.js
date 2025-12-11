@@ -42,11 +42,11 @@ const imageLinkinput = document.querySelector("#image-link");
 const captionInput = document.querySelector("#caption");
 
 function prefillEditprofileFields() {
-  nameField.value = nameFieldPrefill.textContent;
-  descriptionField.value = descriptionFieldprefill.textContent;
+  nameField.value = nameFieldPrefill.textContent.trim();
+  descriptionField.value = descriptionFieldprefill.textContent.trim();
 }
 
-//Submission listeners and handlers for each form.
+//Submission listeners and handlers for each form
 const editProfileform = editProfilemodal.querySelector(".modal__form");
 const newPostFrom = newPostmodal.querySelector(".modal__form");
 
