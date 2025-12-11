@@ -138,7 +138,6 @@ The minimum supported screen width is 320px.*/
     align-items: center;
     text-align: center;
     gap: 20px;
-    max-width: px;
   }
 
   .profile__details {

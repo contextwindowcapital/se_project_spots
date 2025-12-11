@@ -1,78 +1,75 @@
-const editProfilemodal = document.querySelector("#edit-profile-modal");
-const newPostmodal = document.querySelector("#new-post-modal");
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const newPostModal = document.querySelector("#new-post-modal");
 
 const editProfilebtn = document.querySelector(".profile__edit-btn");
 const newPostbtn = document.querySelector(".profile__new-post-btn");
 
-const editProfilecloseBtn = editProfilemodal.querySelector(".modal__close-btn");
-const newPostcloseBtn = newPostmodal.querySelector(".modal__close-btn");
+const editProfilecloseBtn = editProfileModal.querySelector(".modal__close-btn");
+const newPostcloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 //open profile modal
 editProfilebtn.addEventListener("click", function () {
-  editProfilemodal.classList.add("modal_is-opened");
-  prefillEditprofileFields();
+  editProfileModal.classList.add("modal_is-opened");
+  prefillEditProfileFields();
 });
 //open new post modal
 newPostbtn.addEventListener("click", function () {
-  newPostmodal.classList.add("modal_is-opened");
+  newPostModal.classList.add("modal_is-opened");
 });
 
 //close profile modal
 editProfilecloseBtn.addEventListener("click", function () {
-  editProfilemodal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
 //close new post modal
 newPostcloseBtn.addEventListener("click", function () {
-  newPostmodal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
 //Edit Profile Pre-filling its form fields with the current user’s data.
-const nameField = editProfilemodal.querySelector("#name-input-field");
-const descriptionField = editProfilemodal.querySelector(
+const nameField = editProfileModal.querySelector("#name-input-field");
+const descriptionField = editProfileModal.querySelector(
   "#description-input-field"
 );
 
 const nameFieldPrefill = document.querySelector("#profile-name-textarea");
-const descriptionFieldprefill = document.querySelector(
+const descriptionFieldPrefill = document.querySelector(
   "#profile-description-textarea"
 );
 
-const imageLinkinput = document.querySelector("#image-link");
+const imageLinkInput = document.querySelector("#image-link");
 const captionInput = document.querySelector("#caption");
 
-function prefillEditprofileFields() {
+function prefillEditProfileFields() {
   nameField.value = nameFieldPrefill.textContent.trim();
-  descriptionField.value = descriptionFieldprefill.textContent.trim();
+  descriptionField.value = descriptionFieldPrefill.textContent.trim();
 }
 
 //Submission listeners and handlers for each form
-const editProfileform = editProfilemodal.querySelector(".modal__form");
-const newPostFrom = newPostmodal.querySelector(".modal__form");
+const editProfileform = editProfileModal.querySelector(".modal__form");
+const newPostForm = newPostModal.querySelector(".modal__form");
+
+//close modal function
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
 
 //edit post
-function handleProfileformSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   nameFieldPrefill.textContent = nameField.value;
-  descriptionFieldprefill.textContent = descriptionField.value;
-  editProfilemodal.classList.remove("modal_is-opened");
+  descriptionFieldPrefill.textContent = descriptionField.value;
+  closeModal(editProfileModal);
 }
 //new post
 function handleNewpostFormsubmit(evt) {
   evt.preventDefault();
-  console.log(imageLinkinput.value);
+  console.log(imageLinkInput.value);
   console.log(captionInput.value);
-  newPostmodal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 
-editProfileform.addEventListener("submit", handleProfileformSubmit);
+editProfileform.addEventListener("submit", handleProfileFormSubmit);
 
-newPostFrom.addEventListener("submit", handleNewpostFormsubmit);
-
-//Edits save to profile
-
-//1.add ids for edit profile fields in modal and then add ids for textareas on page
-//2.figured out prefill - text is wierd centerd location vs expected CSS?
-//3.figured out working edit profile and saving input valuies
-//4.figured out console logs for new post
-//5.need to do: CSS styling ( smooth transitions, css that matchs figma, )
+newPostForm.addEventListener("submit", handleNewpostFormsubmit);

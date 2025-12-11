@@ -3,7 +3,7 @@
 }
 
 .footer__copyright {
-  font-family: Poppins;
+  font-family: "Poppins", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -11,4 +11,5 @@
   padding: 60px;
   text-align: center;
   margin: 0;
+  color: #212121b2;
 }

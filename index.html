@@ -33,13 +33,13 @@
               <p id="profile-description-textarea" class="profile__description">
                 Civil Aviator
               </p>
-              <button class="profile__edit-btn">
+              <button type="button" class="profile__edit-btn">
                 <img
                   src="./images/edit-icon.svg"
                   alt="edit icon"
                   class="profile__edit-icon"
                 />
-                <p class="profile__edit-link">Edit Profile</p>
+                <span class="profile__edit-link">Edit Profile</span>
               </button>
             </div>
           </div>
@@ -159,7 +159,7 @@
             ></button>
           </div>
           <form class="modal__form" name="profile">
-            <label for="name" class="modal__form-label">Name</label>
+            <label for="name-input-field" class="modal__form-label">Name</label>
             <input
               type="text"
               name="name"
@@ -167,7 +167,7 @@
               class="modal__form-field"
               id="name-input-field"
             />
-            <label for="description" class="modal__form-label"
+            <label for="description-input-field" class="modal__form-label"
               >Description</label
             >
             <input
@@ -193,7 +193,9 @@
             ></button>
           </div>
           <form class="modal__form" name="profile">
-            <label for="name" class="modal__form-label">Image link</label>
+            <label for="image-link-input-field" class="modal__form-label"
+              >Image link</label
+            >
             <input
               type="text"
               name="image-link"
@@ -201,7 +203,9 @@
               class="modal__form-field"
               id="image-link"
             />
-            <label for="description" class="modal__form-label">Caption</label>
+            <label for="caption-input-field" class="modal__form-label"
+              >Caption</label
+            >
             <input
               type="text"
               name="caption"
