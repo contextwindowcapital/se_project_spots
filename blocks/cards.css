@@ -26,7 +26,7 @@ The card sizes should remain the same as in the desktop view.*/
 @media screen and (min-width: 630px) and (max-width: 1319px) {
   .cards__list {
     display: grid;
-    grid-template-columns: repeat(2, 413px);
+    grid-template-columns: repeat(auto-fit, 413px);
     gap: 40px 20px;
     justify-content: center;
     padding: 0;

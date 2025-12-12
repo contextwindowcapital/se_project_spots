@@ -38,8 +38,8 @@ const descriptionFieldPrefill = document.querySelector(
   "#profile-description-textarea"
 );
 
-const imageLinkInput = document.querySelector("#image-link");
-const captionInput = document.querySelector("#caption");
+const imageLinkInput = document.querySelector("#image-link-input-field");
+const captionInput = document.querySelector("#caption-input-field");
 
 function prefillEditProfileFields() {
   nameField.value = nameFieldPrefill.textContent.trim();

@@ -12,6 +12,7 @@
   box-sizing: border-box;
   opacity: 0;
   transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  padding: 0 10px;
 }
 
 .modal_is-opened {
@@ -125,9 +126,7 @@ The minimum supported screen width is 320px.*/
 
 @media screen and (max-width: 629px) {
   .modal__container {
-    max-width: 90%;
-    padding: 16px;
-    margin: 0;
+    padding: 22px 12px 12px;
   }
 
   .modal__form {
@@ -135,12 +134,10 @@ The minimum supported screen width is 320px.*/
   }
 
   .modal__save-btn {
-    max-width: 276px;
-    padding: 0;
+    max-width: none;
   }
 
   .modal__form-field {
-    max-width: 276px;
     margin: 0 0 24px 0;
     box-sizing: border-box;
     font-size: 16px;
@@ -149,7 +146,7 @@ The minimum supported screen width is 320px.*/
   .modal__form-title {
     font-size: 20px;
     margin: 0;
-    padding: 10px;
+    padding-top: 10px;
   }
 
   .modal__save-btn:focus {
