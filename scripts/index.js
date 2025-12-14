@@ -1,3 +1,30 @@
+const initialCards = [
+  {
+    name: "Val Thorens",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+  {
+    name: "Restaurant terrace",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
+  },
+  {
+    name: "An outdoor cafe",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  },
+  {
+    name: "A very long bridge, over the forest and through the trees",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+  },
+  {
+    name: "Mountain house",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+];
+
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const newPostModal = document.querySelector("#new-post-modal");
 
@@ -9,12 +36,12 @@ const newPostcloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 //open profile modal
 editProfilebtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
   prefillEditProfileFields();
 });
 //open new post modal
 newPostbtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 //close profile modal
@@ -55,6 +82,11 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
+//open modal function
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
 //edit post
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -73,3 +105,8 @@ function handleNewpostFormsubmit(evt) {
 editProfileform.addEventListener("submit", handleProfileFormSubmit);
 
 newPostForm.addEventListener("submit", handleNewpostFormsubmit);
+
+//foreach loop - loops through the initialCards array. In the body of its callback, log the name of the current array
+initialCards.forEach(function (currentCard) {
+  initialCards.forEach((currentCard) => console.log(currentCard.name));
+});
