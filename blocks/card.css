@@ -46,7 +46,7 @@
   background-position: center;
   background-size: contain;
   border: none;
-  background-color: transparent;
+  filter: none;
   width: 23px;
   height: 20px;
   padding: 0;
@@ -58,11 +58,14 @@
   opacity: 1;
 }
 
+.card__like-icon__liked {
+  background-color: red;
+}
+
 /*Mobile View (320px – 630px):
 The media query should not be set at 320px. The frames provided in Figma don’t determine the sizes of the media queries.
 The page should match the 320px Figma layout. The only difference will be the amount of space on the sides.
 The minimum supported screen width is 320px.*/
-
 @media screen and (max-width: 629px) {
   .card {
     max-width: 288px;

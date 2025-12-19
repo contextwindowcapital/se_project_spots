@@ -131,6 +131,19 @@ function getCardElement(data) {
   cardTitleElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
+
+  //like button function code
+  const cardLikeButton = cardElement.querySelector(".card__like-icon");
+
+  //toggle like button
+  function toggleLikeBtn(cardLikeButton) {
+    cardLikeButton.classList.toggle("card__like-icon__liked");
+  }
+
+  cardLikeButton.addEventListener("click", function () {
+    toggleLikeBtn(cardLikeButton);
+  });
+
   return cardElement;
 }
 
