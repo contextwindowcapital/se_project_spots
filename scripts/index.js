@@ -94,11 +94,18 @@ function handleProfileFormSubmit(evt) {
   descriptionFieldPrefill.textContent = descriptionField.value;
   closeModal(editProfileModal);
 }
-//new post
+//new post w/ new card modal
 function handleNewpostFormsubmit(evt) {
   evt.preventDefault();
   console.log(imageLinkInput.value);
   console.log(captionInput.value);
+  const newCardData = {
+    name: captionInput.value,
+    link: imageLinkInput.value,
+  };
+  getCardElement(newCardData);
+  const cardElement = getCardElement(newCardData);
+  cardList.prepend(cardElement);
   closeModal(newPostModal);
 }
 
@@ -110,3 +117,28 @@ newPostForm.addEventListener("submit", handleNewpostFormsubmit);
 initialCards.forEach(function (currentCard) {
   initialCards.forEach((currentCard) => console.log(currentCard.name));
 });
+
+//Generating card dynamically from a template element.
+const cardList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = document
+    .querySelector("#card-template")
+    .content.cloneNode(true);
+  const cardTitleElement = cardElement.querySelector(".card__title");
+  const cardImageElement = cardElement.querySelector(".card__image");
+
+  cardTitleElement.textContent = data.name;
+  cardImageElement.src = data.link;
+  cardImageElement.alt = data.name;
+  return cardElement;
+}
+
+initialCards.forEach((data) => {
+  const cardElement = getCardElement(data);
+  cardList.append(cardElement);
+});
+
+// Adding functionality via event listeners to each card.
+
+// Adding new cards with the “New post” modal.

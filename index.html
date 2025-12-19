@@ -54,96 +54,19 @@
         </section>
         <section class="cards">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="a view of Val Thorens ski slopes through a window"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">Val Thorens</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="a restaruant terrace"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">Restaurant terrace</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="a busy outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">An outdoor cafe</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="a long steel cable bridge over a valley"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">A very long bridge, over the forest</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="a covered tunnel in morning light"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">Tunnel with morning light</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="a log cabin on a snowy hillside"
-                class="card__image"
-              />
-              <div class="card__description">
-                <p class="card__title">Mountain house</p>
-                <button
-                  class="card__like-icon"
-                  type="button"
-                  aria-label="Like this image"
-                ></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <div class="card__description">
+                  <p class="card__title"></p>
+                  <button
+                    class="card__like-icon"
+                    type="button"
+                    aria-label="Like this image"
+                  ></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
