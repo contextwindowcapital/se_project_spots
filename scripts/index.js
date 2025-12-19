@@ -114,9 +114,9 @@ editProfileform.addEventListener("submit", handleProfileFormSubmit);
 newPostForm.addEventListener("submit", handleNewpostFormsubmit);
 
 //foreach loop - loops through the initialCards array. In the body of its callback, log the name of the current array
-initialCards.forEach(function (currentCard) {
-  initialCards.forEach((currentCard) => console.log(currentCard.name));
-});
+//initialCards.forEach(function (currentCard) {
+//initialCards.forEach((currentCard) => console.log(currentCard.name));
+//});
 
 //Generating card dynamically from a template element.
 const cardList = document.querySelector(".cards__list");
@@ -142,6 +142,15 @@ function getCardElement(data) {
 
   cardLikeButton.addEventListener("click", function () {
     toggleLikeBtn(cardLikeButton);
+  });
+
+  //delete button functionality
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-icon");
+
+  cardDeleteBtn.addEventListener("click", function () {
+    console.log("delete click");
+    const cardElement = document.querySelector(".card");
+    cardElement.remove();
   });
 
   return cardElement;

@@ -46,7 +46,7 @@
   background-position: center;
   background-size: contain;
   border: none;
-  filter: none;
+  background-color: transparent;
   width: 23px;
   height: 20px;
   padding: 0;
@@ -59,7 +59,54 @@
 }
 
 .card__like-icon__liked {
-  background-color: red;
+  background-image: url(../images/like-icon-liked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  width: 23px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 40%;
+}
+
+.card__image-container {
+  position: relative;
+  width: 100%;
+}
+
+.card__delete-icon {
+  background-image: url(../images/delete-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 40%;
+  z-index: 1;
+}
+
+.card__delete-icon:hover {
+  background-image: url(../images/delete-icon-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 40%;
 }
 
 /*Mobile View (320px – 630px):
