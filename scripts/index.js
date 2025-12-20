@@ -79,12 +79,12 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 
 //close modal function
 function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
+  modal.classList.remove("modal__is-opened");
 }
 
 //open modal function
 function openModal(modal) {
-  modal.classList.add("modal_is-opened");
+  modal.classList.add("modal__is-opened");
 }
 
 //edit post
@@ -153,6 +153,20 @@ function getCardElement(data) {
     cardElement.remove();
   });
 
+  //preview functionality
+  const previewImage = document.querySelector(".modal__image-preview");
+  const descriptionPreviewText = document.querySelector(
+    ".modal__description-preview-text"
+  );
+
+  //open preview modal
+  cardImageElement.addEventListener("click", function () {
+    openModal(previewModal);
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    descriptionPreviewText.textContent = data.name;
+  });
+
   return cardElement;
 }
 
@@ -164,3 +178,14 @@ initialCards.forEach((data) => {
 // Adding functionality via event listeners to each card.
 
 // Adding new cards with the “New post” modal.
+
+//close preview modal
+const previewModal = document.querySelector("#preview-modal");
+
+const previewModalCloseBtn = document.querySelector(
+  ".modal__close-btn__preview"
+);
+
+previewModalCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
+});
