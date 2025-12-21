@@ -28,14 +28,20 @@ const initialCards = [
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const newPostModal = document.querySelector("#new-post-modal");
 
-const editProfilebtn = document.querySelector(".profile__edit-btn");
+const editProfileBtn = document.querySelector(".profile__edit-btn");
 const newPostbtn = document.querySelector(".profile__new-post-btn");
 
 const editProfilecloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const newPostcloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+//preview functionality
+const previewImage = document.querySelector(".modal__image-preview");
+const descriptionPreviewText = document.querySelector(
+  ".modal__description-preview-text"
+);
+
 //open profile modal
-editProfilebtn.addEventListener("click", function () {
+editProfileBtn.addEventListener("click", function () {
   openModal(editProfileModal);
   prefillEditProfileFields();
 });
@@ -79,12 +85,12 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 
 //close modal function
 function closeModal(modal) {
-  modal.classList.remove("modal__is-opened");
+  modal.classList.remove("modal_is-opened");
 }
 
 //open modal function
 function openModal(modal) {
-  modal.classList.add("modal__is-opened");
+  modal.classList.add("modal_is-opened");
 }
 
 //edit post
@@ -97,26 +103,19 @@ function handleProfileFormSubmit(evt) {
 //new post w/ new card modal
 function handleNewpostFormsubmit(evt) {
   evt.preventDefault();
-  console.log(imageLinkInput.value);
-  console.log(captionInput.value);
   const newCardData = {
     name: captionInput.value,
     link: imageLinkInput.value,
   };
-  getCardElement(newCardData);
   const cardElement = getCardElement(newCardData);
   cardList.prepend(cardElement);
+  evt.target.reset();
   closeModal(newPostModal);
 }
 
 editProfileform.addEventListener("submit", handleProfileFormSubmit);
 
 newPostForm.addEventListener("submit", handleNewpostFormsubmit);
-
-//foreach loop - loops through the initialCards array. In the body of its callback, log the name of the current array
-//initialCards.forEach(function (currentCard) {
-//initialCards.forEach((currentCard) => console.log(currentCard.name));
-//});
 
 //Generating card dynamically from a template element.
 const cardList = document.querySelector(".cards__list");
@@ -137,7 +136,7 @@ function getCardElement(data) {
 
   //toggle like button
   function toggleLikeBtn(cardLikeButton) {
-    cardLikeButton.classList.toggle("card__like-icon__liked");
+    cardLikeButton.classList.toggle("card__like-icon_active");
   }
 
   cardLikeButton.addEventListener("click", function () {
@@ -147,17 +146,10 @@ function getCardElement(data) {
   //delete button functionality
   const cardDeleteBtn = cardElement.querySelector(".card__delete-icon");
 
-  cardDeleteBtn.addEventListener("click", function () {
-    console.log("delete click");
-    const cardElement = document.querySelector(".card");
+  cardDeleteBtn.addEventListener("click", function (evt) {
+    evt.target.closest(".card").remove();
     cardElement.remove();
   });
-
-  //preview functionality
-  const previewImage = document.querySelector(".modal__image-preview");
-  const descriptionPreviewText = document.querySelector(
-    ".modal__description-preview-text"
-  );
 
   //open preview modal
   cardImageElement.addEventListener("click", function () {
@@ -175,15 +167,11 @@ initialCards.forEach((data) => {
   cardList.append(cardElement);
 });
 
-// Adding functionality via event listeners to each card.
-
-// Adding new cards with the “New post” modal.
-
 //close preview modal
 const previewModal = document.querySelector("#preview-modal");
 
 const previewModalCloseBtn = document.querySelector(
-  ".modal__close-btn__preview"
+  ".modal__close-btn-preview"
 );
 
 previewModalCloseBtn.addEventListener("click", function () {
