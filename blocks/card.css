@@ -65,7 +65,7 @@
 }
 
 .card__like-icon_active {
-  background-image: url(../images/like-icon-liked.svg);
+  background-image: url(../images/like-icon-active.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

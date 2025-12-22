@@ -148,7 +148,6 @@ function getCardElement(data) {
 
   cardDeleteBtn.addEventListener("click", function (evt) {
     evt.target.closest(".card").remove();
-    cardElement.remove();
   });
 
   //open preview modal
