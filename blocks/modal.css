@@ -48,7 +48,7 @@
 }
 
 .modal__close-btn-preview {
-  background-image: url(../images/close-icon.svg);
+  background-image: url(../images/close-icon-white.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -79,7 +79,7 @@
   padding: 4px 8px;
   background-color: #212121;
   border-radius: 8px;
-  margin: 10px;
+  margin-top: 10px;
   align-self: flex-start;
 }
 
@@ -212,6 +212,9 @@ The minimum supported screen width is 320px.*/
   .modal__close-btn-preview {
     top: -40px;
     right: 0;
+  }
+
+  .modal__description-preview-text {
     font-size: 16px;
   }
 }
